@@ -2,7 +2,7 @@ article {
   display: grid;
   grid-template-columns: [full-start] 1fr [popout-start] 5rem [center] 65ch 5rem [popout-end] 1fr [full-end];
 
-  & :is(h2, h3, p) {
+  > * {
     grid-column: center;
   }
 

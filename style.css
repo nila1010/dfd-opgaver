@@ -1,16 +1,53 @@
 :root {
-    background: #E3EDFB;
+  --background: #e3edfb;
 
-    --color-icon: #0B3A67;
+  --color-icon: #0b3a67;
 
-    --image-width: 8rem;
-    --card-padding: 1rem;
+  --image-width: 8rem;
+  --card-padding: 1rem;
 
-    --font-heading: 1.75rem;
+  --font-heading: 1.75rem;
 
-    /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
-    --hide-overlay: 0;
+  /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
+  --hide-overlay: 1;
 }
 
+section {
+  margin: 50px;
+  padding: 20px;
+  background-color: var(--background);
+  display: grid;
+  gap: 2rem;
+  max-width: 600px;
+  place-items: center;
 
-/* Begynd her... */
+  img {
+    border-radius: 50%;
+  }
+
+  article {
+    grid-column: 2/4;
+    display: grid;
+    grid-template-columns: 1fr;
+    > * + * {
+      margin-block-start: var(--space, 1rem);
+    }
+    h1 {
+      font-size: 50px;
+    }
+    h2 {
+      font-size: 30px;
+      color: green;
+    }
+  }
+
+  div {
+    --space: 2rem;
+    display: flex;
+    gap: 3rem;
+
+    svg {
+      color: var(--color-icon);
+    }
+  }
+}

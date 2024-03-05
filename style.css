@@ -16,6 +16,7 @@
   --step-3: clamp(1.9531rem, 1.604rem + 1.4142vi, 2.6647rem);
   --step-5: clamp(3.0518rem, 2.2259rem + 3.3452vi, 4.7348rem);
 
+  --space-2xs: clamp(0.5rem, 0.4693rem + 0.1242vi, 0.5625rem);
   --space-xs: clamp(0.75rem, 0.6887rem + 0.2484vi, 0.875rem);
   --space-s: clamp(1rem, 0.9387rem + 0.2484vi, 1.125rem);
   --space-m: clamp(1.5rem, 1.408rem + 0.3727vi, 1.6875rem);
@@ -37,16 +38,25 @@ body {
     font-size: var(--step-3);
     --space: var(--space-l);
     color: var(--gray-800);
+    + h3 {
+      --space: var(--space-s);
+    }
   }
   h3 {
     font-size: var(--step-2);
     --space: var(--space-m);
     color: var(--gray-700);
+    + p {
+      --space: var(--space-2xs);
+    }
   }
   h4 {
     font-size: var(--step-1);
     --space: var(--space-s);
     color: var(--gray-700);
+    + p {
+      --space: var(--space-2xs);
+    }
   }
 
   p {

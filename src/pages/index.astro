@@ -35,7 +35,7 @@ import { cardContent } from "../data/card-content.js";
   section {
     --content: min(var(--content-width), 100% - 2rem);
     display: grid;
-    grid-template-columns: 1fr var(--content) 1fr;
+    grid-template-columns: 1fr minmax(0, var(--content-width)) 1fr;
     padding: min(3rem, 5%);
     > header {
       grid-column: 2;
